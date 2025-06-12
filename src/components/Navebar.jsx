@@ -16,7 +16,7 @@ const Navebar = () => {
     }
   }
   return (
-    <nav className="flex flex-row justify-between items-center p-5">
+    <nav className="flex sticky top-0 bg-black z-20 flex-row justify-between items-center p-5">
       <Link to={"/"}>
         <img className="w-10" src={logo} alt="logo" />
       </Link>

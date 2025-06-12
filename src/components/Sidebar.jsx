@@ -3,9 +3,9 @@ import { categories } from "../data";
 
 const Sidebar = ({ chosenItem, setChosenItem }) => {
   return (
-    <aside className="scroll-horizontal sticky top-24  overflow-auto flex flex-row px-4 border-[#3d3d3d] md:h-[92vh] md:border-r-[1px] md:flex-col">
-
-{/* #FC1503 */}
+    <aside className="sticky top-20 flex z-10 bg-black overflow-y-auto  px-4 border-[#3d3d3d] md:h-[92vh] md:overflow-visible md:border-r-[1px] ">
+      {/* #FC1503 */}
+      <div className="flex flex-row scroll-smooth md:overflow-auto md:flex-col">
         {categories.map((item, index) => {
           return (
             <button
@@ -19,17 +19,16 @@ const Sidebar = ({ chosenItem, setChosenItem }) => {
                 className={`span inline-block text-xl ${
                   chosenItem === item.name ? "text-whote" : "text-[#FC1503]"
                 } mr-5`}
-                >
+              >
                 {item.icon}
-              </span> 
+              </span>
               <span>{item.name}</span>
             </button>
           );
         })}
-        
-
       <p className="text-sm hidden md:block">Copyright © 2024 Khaled Gamal</p>
-        
+      </div>
+
     </aside>
   );
 };
