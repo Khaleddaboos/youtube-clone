@@ -26,8 +26,8 @@ const VideoPage = () => {
   // } = videoDetail;
 
   return (
-    <div className="flex flex-col md:flex-row">
-      <div className="m-4 sticky top-24 h-fit md:w-2/3 ">
+    <div className="flex flex-col mt-24 md:flex-row">
+      <div className="m-4 sticky  h-fit md:w-2/3 md:top-24">
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${id}`}
           className="react-player"
@@ -44,8 +44,8 @@ const VideoPage = () => {
             </Link>
           </div>
           <div>
-            <p>{videoDetail?.statistics?.viewCount} views</p>
-            <p>{videoDetail?.statistics?.likeCount} likes</p>
+            <p className="opacity-70 text-sm">{parseInt(videoDetail?.statistics?.viewCount).toLocaleString()} views</p>
+            <p className="opacity-70 text-sm">{parseInt(videoDetail?.statistics?.likeCount).toLocaleString()} likes</p>
           </div>
         </div>
       </div>

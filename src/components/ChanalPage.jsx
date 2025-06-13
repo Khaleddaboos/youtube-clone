@@ -21,7 +21,7 @@ const ChanalPage = () => {
   return (
     <div>
       <div
-        className="h-80"
+        className="h-60 md:h-80"
         style={{
           background: "rgb(2,0,36)",
           background:

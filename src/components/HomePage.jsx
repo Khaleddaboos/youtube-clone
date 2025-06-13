@@ -12,7 +12,7 @@ const Homepage = () => {
     });
   }, [chosenItem]);
   return (
-    <div className="flex flex-col relative md:flex-row">
+    <div className="flex flex-col mt-24 relative md:flex-row">
       <Sidebar chosenItem={chosenItem} setChosenItem={setChosenItem} />
       <div className="mb-4 overflow-auto">
         <p className="m-4 text-4xl font-bold">

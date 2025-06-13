@@ -16,7 +16,7 @@ const Navebar = () => {
     }
   }
   return (
-    <nav className="flex sticky top-0 bg-black z-20 flex-row justify-between items-center p-5">
+    <nav className="flex fixed top-0 w-full bg-black z-20 flex-row justify-between items-center p-5">
       <Link to={"/"}>
         <img className="max-w-10" src={logo} alt="logo" />
       </Link>
@@ -25,7 +25,7 @@ const Navebar = () => {
         onChange={(e)=>setSearchTerm(e.target.value)}
           type="text"
           placeholder="search..."
-          className="text-black px-2 min-w-96 rounded-full border-none outline-none"
+          className="text-black px-2 min-w-52 rounded-full border-none outline-none md:min-w-96"
         />
         <button type="submit">
         <FaSearch className="text-red-600" />
