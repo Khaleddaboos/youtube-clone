@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const Videos = ({ videos ,flex_col}) => {
   // console.log(videos);
   return (
-    <div className={`flex ${flex_col} justify-start flex-wrap gap-3 mx-4 `}>
+    <div className={`flex ${flex_col} flex-wrap gap-3 mx-4 md `}>
       {videos.map((video, index) => {
         return (
           <div key={index} className=" w-80 h-72  bg-zinc-800">
