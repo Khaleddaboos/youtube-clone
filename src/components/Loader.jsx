@@ -1,3 +1,4 @@
 const loader =()=>{
-<span class="loader"></span>
+return(
+<span class="loader"></span>)
 }
