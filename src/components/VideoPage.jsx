@@ -28,7 +28,7 @@ const [isloading,setIsloading]=usestate(true)
   //   statistics: { viewCount, likeCount },
   // } = videoDetail;
   
-  {isloading && return(<Loader/>)}
+  return <Loader/>
 
   return (
     <div className="flex flex-col mt-24 md:flex-row">
