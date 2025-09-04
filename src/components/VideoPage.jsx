@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Loader} from "./Loader.jsx"
 import ReactPlayer from "react-player";
 import Videos from "./Videos";
 import { useParams, Link } from "react-router";
@@ -7,10 +8,12 @@ import { FaCheckCircle } from "react-icons/fa";
 const VideoPage = () => {
   const [videoDetail, setVideoDetail] = useState(null);
   const [videos, setVideos] = useState([]);
+const [isloading,setIsloading]=usestate(true)
   const { id } = useParams();
   useEffect(() => {
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) => {
       setVideoDetail(data.items[0]);
+      setIsloading(false);
     });
     fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`).then(
       (data) => {
@@ -24,6 +27,8 @@ const VideoPage = () => {
   //   snippet: { title, channelId, channelTitle },
   //   statistics: { viewCount, likeCount },
   // } = videoDetail;
+  
+  {isloading && return(<Loader/>)}
 
   return (
     <div className="flex flex-col mt-24 md:flex-row">
