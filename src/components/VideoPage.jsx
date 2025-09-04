@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Loader} from "./Loader.jsx"
+import Loader from "./Loader.jsx"
 import ReactPlayer from "react-player";
 import Videos from "./Videos";
 import { useParams, Link } from "react-router";
