@@ -1,4 +1,4 @@
-const loader =()=>{
+const Loader =()=>{
 return(
 <span className="loader"></span>)
 }
