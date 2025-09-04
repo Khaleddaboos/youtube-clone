@@ -1,4 +1,5 @@
 const loader =()=>{
 return(
-<span class="loader"></span>)
+<span className="loader"></span>)
 }
+
