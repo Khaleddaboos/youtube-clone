@@ -8,7 +8,7 @@ import { FaCheckCircle } from "react-icons/fa";
 const VideoPage = () => {
   const [videoDetail, setVideoDetail] = useState(null);
   const [videos, setVideos] = useState([]);
-const [isloading,setIsloading]=useState(true);
+const [isloading,setIsloading]=useState(false);
   const { id } = useParams();
   useEffect(() => {
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) => {
