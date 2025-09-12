@@ -8,7 +8,7 @@ import { FaCheckCircle } from "react-icons/fa";
 const VideoPage = () => {
   const [videoDetail, setVideoDetail] = useState(null);
   const [videos, setVideos] = useState([]);
-const [isloading,setIsloading]=useState(true);
+const [isloading,setIsloading]= useState(true);
   const { id } = useParams();
   useEffect(() => {
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) => {
@@ -28,9 +28,8 @@ const [isloading,setIsloading]=useState(true);
   //   statistics: { viewCount, likeCount },
   // } = videoDetail;
   
- if (isloading)return <Loader/>
-
-  return (
+ if (isloading){return <Loader/>}else{
+return (
     <div className="flex flex-col mt-24 md:flex-row">
       <div className="m-4 sticky  h-fit md:w-2/3 md:top-24">
         <ReactPlayer
@@ -55,7 +54,7 @@ const [isloading,setIsloading]=useState(true);
         </div>
       </div>
       <Videos flex_col={"flex-col"} videos={videos} />
-    </div>
+    </div>}
   );
 };
 
